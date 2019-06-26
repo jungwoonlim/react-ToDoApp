@@ -40,11 +40,20 @@ class App extends Component {
   };
 
   render() {
-    const { input } = this.state;
+    const { input, todos } = this.state;
     const { handleChange, handleCreate, handleKeyPress } = this;
     return (
-      <TodoListTemplate form={<Form />}>
-        <TodoItemList />
+      <TodoListTemplate
+        form={
+          <Form
+            value={input}
+            onKeyPress={handleKeyPress}
+            onChange={handleChange}
+            onCreate={handleCreate}
+          />
+        }
+      >
+        <TodoItemList todos={todos} />
       </TodoListTemplate>
     );
   }
