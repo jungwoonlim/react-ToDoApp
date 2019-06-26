@@ -1,16 +1,14 @@
 import React from "react";
-import "./todoListTemplate.css";
+import "./TodoListTemplate.css";
 
-const todoListTemplate = ({ form, children }) => {
+const TodoListTemplate = ({ form, children }) => {
   return (
     <main className="todo-list-template">
-      <div className="title">
-        <span>오늘 할 일</span>
-      </div>
+      <div className="title">오늘 할 일</div>
       <section className="form-wrapper">{form}</section>
       <section className="todos-wrapper">{children}</section>
     </main>
   );
 };
 
-export default todoListTemplate;
+export default TodoListTemplate;
